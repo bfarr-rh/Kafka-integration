@@ -1,0 +1,210 @@
+[
+  {
+    "@timestamp": "2025-01-21T04:30:03.200736922Z",
+    "annotations": {
+      "authorization.k8s.io/decision": "allow",
+      "authorization.k8s.io/reason": "RBAC: allowed by ClusterRoleBinding \"bryon-cluster-admin\" of ClusterRole \"cluster-admin\" to User \"bryonbaker\""
+    },
+    "apiVersion": "audit.k8s.io/v1",
+    "auditID": "1c3ffd9f-7a3f-4673-ab7a-dbf321f1d313",
+    "hostname": "ip-10-0-95-246.ap-southeast-1.compute.internal",
+    "k8s_audit_level": "Metadata",
+    "kind": "Event",
+    "level": "Metadata",
+    "log_source": "kubeAPI",
+    "log_type": "audit",
+    "objectRef": {
+      "apiVersion": "v1",
+      "name": "sleep-pod",
+      "namespace": "sleeper",
+      "resource": "pods"
+    },
+    "openshift": {
+      "cluster_id": "039d8c61-5846-4085-92fb-8c1fe852272d",
+      "sequence": 1737433803201095980
+    },
+    "requestReceivedTimestamp": "2025-01-21T04:30:03.161633Z",
+    "requestURI": "/api/v1/namespaces/sleeper/pods/sleep-pod",
+    "responseStatus": {
+      "code": 200,
+      "metadata": {}
+    },
+    "sourceIPs": [
+      "10.0.100.142"
+    ],
+    "stage": "ResponseComplete",
+    "stageTimestamp": "2025-01-21T04:30:03.170841Z",
+    "user": {
+      "extra": {
+        "scopes.authorization.openshift.io": [
+          "user:full"
+        ]
+      },
+      "groups": [
+        "cluster-admins",
+        "system:authenticated:oauth",
+        "system:authenticated"
+      ],
+      "uid": "6574b6b9-28fe-4d52-9ce6-72826e436d14",
+      "username": "bryonbaker"
+    },
+    "userAgent": "oc/4.16.0 (linux/amd64) kubernetes/e4cacc0",
+    "verb": "delete"
+  },
+  {
+    "@timestamp": "2025-01-21T04:30:03.332657684Z",
+    "annotations": {
+      "authorization.k8s.io/decision": "allow",
+      "authorization.k8s.io/reason": "RBAC: allowed by ClusterRoleBinding \"bryon-cluster-admin\" of ClusterRole \"cluster-admin\" to User \"bryonbaker\""
+    },
+    "apiVersion": "audit.k8s.io/v1",
+    "auditID": "5853af70-8ffb-4868-820d-d0c9f0a7b4d2",
+    "hostname": "ip-10-0-95-246.ap-southeast-1.compute.internal",
+    "k8s_audit_level": "Metadata",
+    "kind": "Event",
+    "level": "Metadata",
+    "log_source": "kubeAPI",
+    "log_type": "audit",
+    "objectRef": {
+      "apiVersion": "v1",
+      "name": "sleep-pod",
+      "namespace": "sleeper",
+      "resource": "pods"
+    },
+    "openshift": {
+      "cluster_id": "039d8c61-5846-4085-92fb-8c1fe852272d",
+      "sequence": 1737433803332961519
+    },
+    "requestReceivedTimestamp": "2025-01-21T04:30:03.266731Z",
+    "requestURI": "/api/v1/namespaces/sleeper/pods/sleep-pod",
+    "responseStatus": {
+      "code": 200,
+      "metadata": {}
+    },
+    "sourceIPs": [
+      "10.0.100.142"
+    ],
+    "stage": "ResponseComplete",
+    "stageTimestamp": "2025-01-21T04:30:03.269281Z",
+    "user": {
+      "extra": {
+        "scopes.authorization.openshift.io": [
+          "user:full"
+        ]
+      },
+      "groups": [
+        "cluster-admins",
+        "system:authenticated:oauth",
+        "system:authenticated"
+      ],
+      "uid": "6574b6b9-28fe-4d52-9ce6-72826e436d14",
+      "username": "bryonbaker"
+    },
+    "userAgent": "oc/4.16.0 (linux/amd64) kubernetes/e4cacc0",
+    "verb": "get"
+  },
+  {
+    "@timestamp": "2025-01-21T04:30:03.367661149Z",
+    "annotations": {
+      "authorization.k8s.io/decision": "allow",
+      "authorization.k8s.io/reason": "RBAC: allowed by ClusterRoleBinding \"bryon-cluster-admin\" of ClusterRole \"cluster-admin\" to User \"bryonbaker\""
+    },
+    "apiVersion": "audit.k8s.io/v1",
+    "auditID": "1c029125-7de1-4950-9890-10c93e5729b7",
+    "hostname": "ip-10-0-95-246.ap-southeast-1.compute.internal",
+    "k8s_audit_level": "Metadata",
+    "kind": "Event",
+    "level": "Metadata",
+    "log_source": "kubeAPI",
+    "log_type": "audit",
+    "objectRef": {
+      "apiVersion": "v1",
+      "name": "sleep-pod",
+      "namespace": "sleeper",
+      "resource": "pods"
+    },
+    "openshift": {
+      "cluster_id": "039d8c61-5846-4085-92fb-8c1fe852272d",
+      "sequence": 1737433803367970706
+    },
+    "requestReceivedTimestamp": "2025-01-21T04:30:03.365797Z",
+    "requestURI": "/api/v1/namespaces/sleeper/pods?fieldSelector=metadata.name%3Dsleep-pod&limit=500&resourceVersion=0",
+    "responseStatus": {
+      "code": 200,
+      "metadata": {}
+    },
+    "sourceIPs": [
+      "10.0.100.142"
+    ],
+    "stage": "ResponseComplete",
+    "stageTimestamp": "2025-01-21T04:30:03.366564Z",
+    "user": {
+      "extra": {
+        "scopes.authorization.openshift.io": [
+          "user:full"
+        ]
+      },
+      "groups": [
+        "cluster-admins",
+        "system:authenticated:oauth",
+        "system:authenticated"
+      ],
+      "uid": "6574b6b9-28fe-4d52-9ce6-72826e436d14",
+      "username": "bryonbaker"
+    },
+    "userAgent": "oc/4.16.0 (linux/amd64) kubernetes/e4cacc0",
+    "verb": "list"
+  },
+  {
+    "@timestamp": "2025-01-21T04:30:03.474955333Z",
+    "annotations": {
+      "authorization.k8s.io/decision": "allow",
+      "authorization.k8s.io/reason": "RBAC: allowed by ClusterRoleBinding \"bryon-cluster-admin\" of ClusterRole \"cluster-admin\" to User \"bryonbaker\""
+    },
+    "apiVersion": "audit.k8s.io/v1",
+    "auditID": "950a15a3-ed0f-4590-aa88-7319e425170b",
+    "hostname": "ip-10-0-95-246.ap-southeast-1.compute.internal",
+    "k8s_audit_level": "Metadata",
+    "kind": "Event",
+    "level": "Metadata",
+    "log_source": "kubeAPI",
+    "log_type": "audit",
+    "objectRef": {
+      "apiVersion": "v1",
+      "name": "sleep-pod",
+      "namespace": "sleeper",
+      "resource": "pods"
+    },
+    "openshift": {
+      "cluster_id": "039d8c61-5846-4085-92fb-8c1fe852272d",
+      "sequence": 1737433803475249118
+    },
+    "requestReceivedTimestamp": "2025-01-21T04:30:03.463271Z",
+    "requestURI": "/api/v1/namespaces/sleeper/pods?allowWatchBookmarks=true&fieldSelector=metadata.name%3Dsleep-pod&resourceVersion=225389&timeoutSeconds=349&watch=true",
+    "responseStatus": {
+      "code": 200,
+      "metadata": {}
+    },
+    "sourceIPs": [
+      "10.0.100.142"
+    ],
+    "stage": "ResponseStarted",
+    "stageTimestamp": "2025-01-21T04:30:03.463689Z",
+    "user": {
+      "extra": {
+        "scopes.authorization.openshift.io": [
+          "user:full"
+        ]
+      },
+      "groups": [
+        "cluster-admins",
+        "system:authenticated:oauth",
+        "system:authenticated"
+      ],
+      "uid": "6574b6b9-28fe-4d52-9ce6-72826e436d14",
+      "username": "bryonbaker"
+    },
+    "userAgent": "oc/4.16.0 (linux/amd64) kubernetes/e4cacc0",
+    "verb": "watch"
+  }
+]

@@ -1,0 +1,305 @@
+[
+  {
+    "@timestamp": "2025-01-21T04:29:57.172533266Z",
+    "annotations": {
+      "authorization.k8s.io/decision": "allow",
+      "authorization.k8s.io/reason": "RBAC: allowed by ClusterRoleBinding \"bryon-cluster-admin\" of ClusterRole \"cluster-admin\" to User \"bryonbaker\""
+    },
+    "apiVersion": "audit.k8s.io/v1",
+    "auditID": "86c7ab18-e6de-454d-ae43-e97a7996576b",
+    "hostname": "ip-10-0-55-126.ap-southeast-1.compute.internal",
+    "k8s_audit_level": "Metadata",
+    "kind": "Event",
+    "level": "Metadata",
+    "log_source": "kubeAPI",
+    "log_type": "audit",
+    "objectRef": {
+      "apiVersion": "v1",
+      "name": "sleep-pod",
+      "namespace": "sleeper",
+      "resource": "pods"
+    },
+    "openshift": {
+      "cluster_id": "039d8c61-5846-4085-92fb-8c1fe852272d",
+      "sequence": 1737433797172778304
+    },
+    "requestReceivedTimestamp": "2025-01-21T04:29:57.157249Z",
+    "requestURI": "/api/v1/namespaces/sleeper/pods/sleep-pod",
+    "responseStatus": {
+      "code": 404,
+      "details": {
+        "kind": "pods",
+        "name": "sleep-pod"
+      },
+      "message": "pods \"sleep-pod\" not found",
+      "metadata": {},
+      "reason": "NotFound",
+      "status": "Failure"
+    },
+    "sourceIPs": [
+      "10.0.100.142"
+    ],
+    "stage": "ResponseComplete",
+    "stageTimestamp": "2025-01-21T04:29:57.159961Z",
+    "user": {
+      "extra": {
+        "scopes.authorization.openshift.io": [
+          "user:full"
+        ]
+      },
+      "groups": [
+        "cluster-admins",
+        "system:authenticated:oauth",
+        "system:authenticated"
+      ],
+      "uid": "6574b6b9-28fe-4d52-9ce6-72826e436d14",
+      "username": "bryonbaker"
+    },
+    "userAgent": "oc/4.16.0 (linux/amd64) kubernetes/e4cacc0",
+    "verb": "get"
+  },
+  {
+    "@timestamp": "2025-01-21T04:29:57.391522019Z",
+    "annotations": {
+      "authorization.k8s.io/decision": "allow",
+      "authorization.k8s.io/reason": "RBAC: allowed by ClusterRoleBinding \"bryon-cluster-admin\" of ClusterRole \"cluster-admin\" to User \"bryonbaker\"",
+      "mutation.webhook.admission.k8s.io/round_0_index_2": "{\"configuration\":\"pod-identity-webhook\",\"webhook\":\"pod-identity-webhook.aws.mutate.io\",\"mutated\":false}",
+      "pod-security.kubernetes.io/enforce-policy": "privileged:latest",
+      "securitycontextconstraints.admission.openshift.io/chosen": "restricted-v2",
+      "securitycontextconstraints.admission.openshift.io/reason": "\"restricted-v2\" is most restrictive, not denied, and chosen over \"nonroot-v2\" because \"restricted-v2\" permits less runAs strategies",
+      "securitycontextconstraints.admission.openshift.io/too-restrictive-anyuid": "pod.metadata.annotations[container.seccomp.security.alpha.kubernetes.io/sleep-forever]: Forbidden: seccomp may not be set",
+      "securityserviceconstraints.admission.openshift.io/denied": ""
+    },
+    "apiVersion": "audit.k8s.io/v1",
+    "auditID": "2103c6b2-f4ed-45f3-adfe-61e4dcb09dc7",
+    "hostname": "ip-10-0-55-126.ap-southeast-1.compute.internal",
+    "k8s_audit_level": "Metadata",
+    "kind": "Event",
+    "level": "Metadata",
+    "log_source": "kubeAPI",
+    "log_type": "audit",
+    "objectRef": {
+      "apiVersion": "v1",
+      "name": "sleep-pod",
+      "namespace": "sleeper",
+      "resource": "pods"
+    },
+    "openshift": {
+      "cluster_id": "039d8c61-5846-4085-92fb-8c1fe852272d",
+      "sequence": 1737433797391723935
+    },
+    "requestReceivedTimestamp": "2025-01-21T04:29:57.363245Z",
+    "requestURI": "/api/v1/namespaces/sleeper/pods?fieldManager=kubectl-client-side-apply&fieldValidation=Ignore",
+    "responseStatus": {
+      "code": 201,
+      "metadata": {}
+    },
+    "sourceIPs": [
+      "10.0.100.142"
+    ],
+    "stage": "ResponseComplete",
+    "stageTimestamp": "2025-01-21T04:29:57.391040Z",
+    "user": {
+      "extra": {
+        "scopes.authorization.openshift.io": [
+          "user:full"
+        ]
+      },
+      "groups": [
+        "cluster-admins",
+        "system:authenticated:oauth",
+        "system:authenticated"
+      ],
+      "uid": "6574b6b9-28fe-4d52-9ce6-72826e436d14",
+      "username": "bryonbaker"
+    },
+    "userAgent": "oc/4.16.0 (linux/amd64) kubernetes/e4cacc0",
+    "verb": "create"
+  },
+  {
+    "@timestamp": "2025-01-21T04:29:57.410042165Z",
+    "annotations": {
+      "authorization.k8s.io/decision": "allow",
+      "authorization.k8s.io/reason": "RBAC: allowed by ClusterRoleBinding \"system:kube-scheduler\" of ClusterRole \"system:kube-scheduler\" to User \"system:kube-scheduler\""
+    },
+    "apiVersion": "audit.k8s.io/v1",
+    "auditID": "03d5dfd7-b775-4dce-be85-ab8cdd9366bb",
+    "hostname": "ip-10-0-55-126.ap-southeast-1.compute.internal",
+    "k8s_audit_level": "Metadata",
+    "kind": "Event",
+    "level": "Metadata",
+    "log_source": "kubeAPI",
+    "log_type": "audit",
+    "objectRef": {
+      "apiVersion": "v1",
+      "name": "sleep-pod",
+      "namespace": "sleeper",
+      "resource": "pods",
+      "subresource": "binding",
+      "uid": "a5a2adfa-bcc0-4917-aa63-20f3dc297f12"
+    },
+    "openshift": {
+      "cluster_id": "039d8c61-5846-4085-92fb-8c1fe852272d",
+      "sequence": 1737433797410331412
+    },
+    "requestReceivedTimestamp": "2025-01-21T04:29:57.397880Z",
+    "requestURI": "/api/v1/namespaces/sleeper/pods/sleep-pod/binding",
+    "responseStatus": {
+      "code": 201,
+      "metadata": {},
+      "status": "Success"
+    },
+    "sourceIPs": [
+      "10.0.64.9"
+    ],
+    "stage": "ResponseComplete",
+    "stageTimestamp": "2025-01-21T04:29:57.408000Z",
+    "user": {
+      "groups": [
+        "system:authenticated"
+      ],
+      "username": "system:kube-scheduler"
+    },
+    "userAgent": "kube-scheduler/v1.30.7 (linux/amd64) kubernetes/251e31a/scheduler",
+    "verb": "create"
+  },
+  {
+    "@timestamp": "2025-01-21T04:29:57.430747695Z",
+    "annotations": {
+      "authorization.k8s.io/decision": "allow",
+      "authorization.k8s.io/reason": ""
+    },
+    "apiVersion": "audit.k8s.io/v1",
+    "auditID": "7857716d-86d8-4b27-a4bd-518a488c60f0",
+    "hostname": "ip-10-0-55-126.ap-southeast-1.compute.internal",
+    "k8s_audit_level": "Metadata",
+    "kind": "Event",
+    "level": "Metadata",
+    "log_source": "kubeAPI",
+    "log_type": "audit",
+    "objectRef": {
+      "apiVersion": "v1",
+      "name": "sleep-pod",
+      "namespace": "sleeper",
+      "resource": "pods"
+    },
+    "openshift": {
+      "cluster_id": "039d8c61-5846-4085-92fb-8c1fe852272d",
+      "sequence": 1737433797431918870
+    },
+    "requestReceivedTimestamp": "2025-01-21T04:29:57.422639Z",
+    "requestURI": "/api/v1/namespaces/sleeper/pods/sleep-pod",
+    "responseStatus": {
+      "code": 200,
+      "metadata": {}
+    },
+    "sourceIPs": [
+      "10.0.30.58"
+    ],
+    "stage": "ResponseComplete",
+    "stageTimestamp": "2025-01-21T04:29:57.428781Z",
+    "user": {
+      "groups": [
+        "system:nodes",
+        "system:authenticated"
+      ],
+      "username": "system:node:ip-10-0-55-126.ap-southeast-1.compute.internal"
+    },
+    "userAgent": "kubelet/v1.30.7 (linux/amd64) kubernetes/251e31a",
+    "verb": "get"
+  },
+  {
+    "@timestamp": "2025-01-21T04:29:57.435384327Z",
+    "annotations": {
+      "authorization.k8s.io/decision": "allow",
+      "authorization.k8s.io/reason": "RBAC: allowed by ClusterRoleBinding \"openshift-ovn-kubernetes-node-identity-limited\" of ClusterRole \"openshift-ovn-kubernetes-node-limited\" to Group \"system:ovn-nodes\""
+    },
+    "apiVersion": "audit.k8s.io/v1",
+    "auditID": "f87854a9-4783-4fc6-b13b-c932dada71eb",
+    "hostname": "ip-10-0-55-126.ap-southeast-1.compute.internal",
+    "k8s_audit_level": "Metadata",
+    "kind": "Event",
+    "level": "Metadata",
+    "log_source": "kubeAPI",
+    "log_type": "audit",
+    "objectRef": {
+      "apiVersion": "v1",
+      "name": "sleep-pod",
+      "namespace": "sleeper",
+      "resource": "pods",
+      "resourceVersion": "225317",
+      "subresource": "status",
+      "uid": "a5a2adfa-bcc0-4917-aa63-20f3dc297f12"
+    },
+    "openshift": {
+      "cluster_id": "039d8c61-5846-4085-92fb-8c1fe852272d",
+      "sequence": 1737433797435594575
+    },
+    "requestReceivedTimestamp": "2025-01-21T04:29:57.417696Z",
+    "requestURI": "/api/v1/namespaces/sleeper/pods/sleep-pod/status",
+    "responseStatus": {
+      "code": 200,
+      "metadata": {}
+    },
+    "sourceIPs": [
+      "10.0.30.58"
+    ],
+    "stage": "ResponseComplete",
+    "stageTimestamp": "2025-01-21T04:29:57.433966Z",
+    "user": {
+      "groups": [
+        "system:ovn-nodes",
+        "system:authenticated"
+      ],
+      "username": "system:ovn-node:ip-10-0-55-126.ap-southeast-1.compute.internal"
+    },
+    "userAgent": "ip-10-0-55-126/ovnkube@ef230a04d1d0 (linux/amd64) kubernetes/v0.30.2",
+    "verb": "update"
+  },
+  {
+    "@timestamp": "2025-01-21T04:29:57.467046130Z",
+    "annotations": {
+      "authorization.k8s.io/decision": "allow",
+      "authorization.k8s.io/reason": ""
+    },
+    "apiVersion": "audit.k8s.io/v1",
+    "auditID": "b2871778-8bad-4f8b-aced-d84d1d17fa42",
+    "hostname": "ip-10-0-55-126.ap-southeast-1.compute.internal",
+    "k8s_audit_level": "Metadata",
+    "kind": "Event",
+    "level": "Metadata",
+    "log_source": "kubeAPI",
+    "log_type": "audit",
+    "objectRef": {
+      "apiVersion": "v1",
+      "name": "sleep-pod",
+      "namespace": "sleeper",
+      "resource": "pods",
+      "subresource": "status"
+    },
+    "openshift": {
+      "cluster_id": "039d8c61-5846-4085-92fb-8c1fe852272d",
+      "sequence": 1737433797467334673
+    },
+    "requestReceivedTimestamp": "2025-01-21T04:29:57.432501Z",
+    "requestURI": "/api/v1/namespaces/sleeper/pods/sleep-pod/status",
+    "responseStatus": {
+      "code": 200,
+      "metadata": {}
+    },
+    "sourceIPs": [
+      "10.0.30.58"
+    ],
+    "stage": "ResponseComplete",
+    "stageTimestamp": "2025-01-21T04:29:57.454153Z",
+    "user": {
+      "groups": [
+        "system:nodes",
+        "system:authenticated"
+      ],
+      "username": "system:node:ip-10-0-55-126.ap-southeast-1.compute.internal"
+    },
+    "userAgent": "kubelet/v1.30.7 (linux/amd64) kubernetes/251e31a",
+    "verb": "patch"
+  }
+]
